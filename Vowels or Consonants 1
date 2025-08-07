@@ -8,16 +8,12 @@ public class Solution {
 
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    char ch = sc.next().charAt(0);
-     if (Character.isLetter(ch)) {
-            char upperCh = Character.toUpperCase(ch);
-            if (upperCh == 'A' || upperCh == 'E' || upperCh == 'I' || upperCh == 'O' || upperCh == 'U') {
-                System.out.println("The Character " + ch + " is Vowel");
-            } else {
-                System.out.println("The Character " + ch + " is Consonant");
-            }
-        } else {
-            System.out.println("Invalid Input");
-        }    
+      char ch = sc.next().charAt(0);
+      if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+            System.out.printf("The Character %c is Vowel",ch);
+        }
+        else{
+             System.out.printf("The Character %c is Consonant",ch);
+        }  
     }
 }
