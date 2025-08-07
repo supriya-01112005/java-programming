@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);  
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        if (n < 1 || n > 20 || m < 1 || m > 20) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        if (n > m) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        double fib1 = 0, fib2 = 1, fibCurrent = 0;
+        double sum = 0;
+        
+        for (int i = 1; i <= m; i++) {
+            if (i == 1) {
+                fibCurrent = fib1;
+            } else if (i == 2) {
+                fibCurrent = fib2;
+            } else {
+                fibCurrent = fib1 + fib2;
+                fib1 = fib2;
+                fib2 = fibCurrent;
+            }
+            if (i >= n) {
+                sum += fibCurrent;
+            }
+        }
+        
+        System.out.println("The Sum of Fibonacci value is " + sum);
+    }
+}
