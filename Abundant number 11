@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int number=sc.nextInt();
+    int sumOfDigits=0;
+    for (int i =1; i <= number / 2; i++){
+        if (number % i == 0) {
+            sumOfDigits += i;
+        }
+    }
+    if (sumOfDigits > number) {
+        System.out.println("Abundant Number");
+    } else {
+        System.out.println("Not Abundant Number");
+    }    
+        
+  }
+}
