@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String str=sc.nextLine();
+    int hashc=0,starc=0;
+     for(int i=0; i<str.length(); i++){
+         char ch=str.charAt(i);
+         if(ch=='*'){
+             starc++;
+         }
+         else{
+             hashc++;
+         }
+     }
+        int diff=starc-hashc;
+        if (diff == 0) {
+            System.out.println("0");
+        } else if(diff%2==0){
+           
+            System.out.printf("The Difference of the character in the given string: %02d",diff);
+        }
+        else{
+             System.out.printf("The Difference of the character in the given string: %03d",diff);
+
+        }
+
+    }
+}
